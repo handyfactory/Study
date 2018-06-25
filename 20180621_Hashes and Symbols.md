@@ -49,3 +49,48 @@ puts hs[:name]
 puts yr[:name]
 ```
 
+---
+
+# Hash practice
+
+```ruby
+matz = { "First name" => "Yukihiro",
+  "Last name" => "Matsumoto",
+  "Age" => 47,
+  "Nationality" => "Japanese",
+  "Nickname" => "Matz"
+}
+
+matz.each do |key, value|
+  puts key
+end
+
+```
+
+- puts key 하면 key 가 주르륵 나온다
+- puts value 하면 value 가 주르륵 나온다
+
+---
+
+# Symbol
+
+- 심볼은 이름의 종류
+- 심볼은 String이 아니다
+- String은 같은 값이라도 할당되는 메모리의 위치는 다른데
+- 심볼은 같은 값이면 할당되는 메모리 위치 같다!
+
+```ruby
+puts "string".object_id
+puts "string".object_id
+
+puts :symbol.object_id
+puts :symbol.object_id
+
+7914600
+7914340
+802268
+802268
+```
+
+- 심볼을 만들 땐 공백을 두지 마라
+
